@@ -183,7 +183,7 @@ button{
     {
         flex-direction: column-reverse;
         top:10px;
-        
+        margin-top: 2rem; 
     }
  
 }
