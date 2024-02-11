@@ -1,0 +1,514 @@
+@import url(reset.css);
+/* body>*{
+    border: 2px solid black;
+} */
+
+:root {
+  --green-color: #468903;
+  --orange-color: #d89f21;
+  --blue-color: #264b96;
+  --pink-color: #c32055;
+  --main-back-color: #eaeaea;
+  --card-back-color: #f6f6f6;
+}
+
+.green_back {
+  background-color: var(--green-color);
+}
+
+.orange-back {
+  background-color: var(--orange-color);
+}
+
+.blue-back {
+  background-color: var(--blue-color);
+}
+
+.pink-back {
+  background-color: var(--pink-color);
+}
+
+.common-container {
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #545658;
+  background-color: #f6f6f6;
+  gap: 5px;
+}
+/* Стили для меню */
+.menu h2 {
+  border-bottom: 1px solid #e0e0e0;
+  padding: 1rem;
+  font-size: 1.5rem;
+}
+
+.main-container h2{
+    font-size: 1.5rem;
+}
+
+.menu {
+  grid-column: 1 / 2;
+  min-height: 100vh;
+  box-shadow: 5px 0px 2px #c0c0c0;
+}
+
+.menu img {
+  display: inline-block;
+  width: 1.5rem;
+  margin-right: 0.7rem;
+}
+
+.menu ul li {
+  display: flex;
+  margin: 1rem;
+  padding: 0.5rem;
+  color: #838383;
+  align-items: center;
+}
+
+.menu ul li a {
+  display: inline-block;
+  text-decoration: none;
+}
+
+.menu ul li.active {
+  background-color: #c32055;
+  color: white;
+}
+
+.menu ul li:before {
+  content: "";
+  background-size: 1.5rem 1.5rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  padding-left: 0.4rem;
+  background-repeat: no-repeat;
+}
+
+.dash::before {
+  background-image: url(/images/dashboard_gray.svg);
+}
+
+.dash.active::before {
+  background-image: url(/images/dashboard_white.svg);
+}
+.user_profile::before {
+  background-image: url(/images/account_gray.svg);
+}
+
+.user_profile.active::before {
+  background-image: url(/images/account_white.svg);
+}
+
+.map::before {
+  background-image: url(/images/map_gray.svg);
+}
+
+.notify::before {
+  background-image: url(/images/notify_gray.svg);
+}
+
+.support::before {
+  background-image: url(/images/support_gray.svg);
+}
+
+/* Стили для основного контента */
+.main-container {
+  grid-column: 2 / 5;
+  padding: 1rem 1.5rem;
+  background-color: var(--main-back-color);
+  /* display: grid;
+  grid-template-rows: auto; */
+}
+/* Строка 1 */
+.row1 {
+  display: flex;
+  gap: 15px;
+  margin-top: 3rem;
+}
+
+.card {
+  background-color: #f6f6f6;
+  border: 1px solid #e0e0e0;
+  /* border-radius: 8px; */
+  /* padding: 1rem; */
+  padding-top: 0;
+  flex: 1;
+  flex-basis: calc(20%-15px);
+  /* min-width: 170px; */
+  box-shadow: 3px 3px 2px #bebebe;
+}
+
+.card hr {
+  margin: 0;
+  border: none;
+  border-top: 1px solid #e0e0e0;
+}
+
+.card_icon {
+  display: inline-block;
+  padding: 0.8rem;
+  width: 2rem;
+  height: 2rem;
+  position: relative;
+  top: -15px;
+  margin-left: 1rem;
+}
+
+.card-content {
+  display: flex;
+  justify-content: space-between;
+  text-align: end;
+}
+
+.card_title {
+  margin: 1rem 1rem 0.5rem 0;
+  font-size: 0.6rem;
+  color: #aeaeaf;
+}
+
+.card_value {
+  margin: 0rem 1rem 0.5rem 0;
+}
+
+.card-additional {
+  padding: 0.6rem;
+}
+
+.litle_card_icon {
+  width: 0.8rem;
+  position: relative;
+  top: 2.3px;
+}
+
+.description {
+  color: #c9c9c9;
+  font-size: 0.7rem;
+}
+
+/* Строка 2 */
+.row2 {
+  display: flex;
+  gap: 15px;
+  margin-top: 3rem;
+}
+
+.graphic-card {
+  flex: 1;
+  flex-basis: calc(33%-15px);
+  border: 1px solid #e0e0e0;
+  box-shadow: 3px 3px 2px #bebebe;
+  background-color: #f6f6f6;
+  padding: 0rem 1rem 1rem 1rem;
+  /* min-width: 200px; */
+}
+
+.graphics_img {
+  width: 90%;
+  min-width: 30%;
+  padding: 0.8rem;
+  position: relative;
+  top: -10px;
+}
+
+.graphic-card h3 {
+  text-align: start;
+  margin-bottom: 0.4rem;
+}
+
+.graphic-card p {
+  font-size: 0.8rem;
+}
+
+.graph-description {
+  font-size: 0.7rem;
+}
+
+/* Строка 3 */
+.row3 {
+  display: flex;
+  gap: 15px;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+}
+
+.big-card {
+  flex: 1;
+  background-color: var(--card-back-color);
+  box-shadow: 3px 3px 2px #bebebe;
+  flex-basis: calc(50%-15px);
+}
+
+.big-card-nav ul {
+  display: flex;
+  background-color: var(--orange-color);
+  font-size: 0.8rem;
+  color: white;
+  letter-spacing: 0.5px;
+  margin: 0 1.2rem;
+  position: relative;
+  top: -15px;
+}
+
+.big-card-nav ul li {
+  margin: 0.5rem;
+  padding: 0.5rem 0.5rem 0.5rem 2rem;
+  position: relative;
+}
+
+.big-card-nav ul li:first-child {
+  padding-left: 0.5rem;
+}
+.big-card-nav ul li:first-child:hover {
+  background-color: inherit;
+}
+
+.big-card-nav ul li:before {
+  content: "";
+  background-size: 1rem 1rem;
+  width: 1rem;
+  height: 1rem;
+  position: absolute;
+  left: 5px;
+  top: 6px;
+}
+
+.big-card-nav ul li:nth-child(2)::before {
+  background-image: url(/images/bug.svg);
+}
+
+.big-card-nav ul li:nth-child(3)::before {
+  background-image: url(/images/web.svg);
+}
+
+.big-card-nav ul li:nth-child(4)::before {
+  background-image: url(/images/cloud.svg);
+}
+
+.big-card-nav ul li:hover {
+  background-color: #dcac48;
+}
+
+table {
+  font-size: 0.7rem;
+  margin: 0 1rem 1rem 1rem;
+  border-collapse: separate;
+  border-spacing: 0px;
+}
+
+.table_img {
+  width: 50%;
+}
+
+tr,
+td {
+  border-bottom: 1.5px solid #dcdcdc;
+  padding: 0.5rem;
+}
+
+/* Изменение вида чекбокса */
+input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-color: transparent;
+  border: 1px solid #000; /* Додавання рамки */
+  border-radius: 2px;
+  width: 0.7rem;
+  height: 0.7rem;
+  position: relative;
+  top: 7px;
+  background-color: #e1e1e1;
+}
+
+/* Изменение галочки */
+input[type="checkbox"]:checked::before {
+  content: "\2713";
+  font-size: 10px;
+  font-weight: 900;
+  color: #000;
+  position: relative;
+  top: -3.5px;
+  left: 2px;
+}
+
+.big-card-title {
+  margin: 0 1rem;
+  padding: 1rem;
+  background-color: var(--blue-color);
+  color: white;
+  position: relative;
+  top: -15px;
+}
+.big-card h3 {
+  font-size: 0.9rem;
+  letter-spacing: 0.7px;
+}
+.big-card p {
+  margin-top: 0.5rem;
+  font-size: 0.8rem;
+}
+
+.second_table {
+  width: 90%;
+}
+
+.second_table tr:first-child {
+  color: #45b59b;
+}
+
+.second_table tr td:first-child {
+  padding-left: 1.5rem;
+}
+
+.second_table tr:last-child td {
+  border-bottom: none;
+}
+
+/* Подвал */
+footer {
+  display: flex;
+  padding: 1rem 1rem 0 1rem;
+  border-top: 2px solid #cacaca;
+  justify-content: space-between;
+}
+
+footer ul li {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: bold;
+  padding: 0 1rem;
+}
+
+footer p {
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+}
+
+@media screen and (max-width: 1000px) {
+  .row1 {
+    flex-wrap: wrap;
+  }
+
+  .card {
+    flex-basis: calc(50% - 15px);
+    margin-bottom: 15px;
+  }
+
+  .row3 {
+    flex-direction: column;
+  }
+
+  .big-card:first-child {
+    margin-bottom: 1rem;
+  }
+}
+
+/* Бургер */
+.burger {
+  display: none;
+  position: relative;
+  z-index: 50;
+  align-items: center;
+  justify-content: flex-end;
+  width: 20px;
+  height: 15px;
+}
+
+.burger span {
+  height: 2px;
+  width: 100%;
+  transform: scale(1);
+  background-color: black;
+}
+
+.burger::before,
+.burger::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  background-color: black;
+  transition: all 0.3s ease 0s;
+}
+
+.burger::before {
+  top: 0;
+}
+
+.burger::after {
+  bottom: 0;
+}
+
+.burger.active span {
+  transform: scale(0);
+}
+
+/* .burger.active::before{
+    top:50%;
+    transform: rotate(-45deg) translate(0,-50%);
+}
+
+.burger.active::after{
+    top:50%;
+    transform: rotate(45deg) translate(0,50%);
+} */
+
+@media screen and (max-width: 800px) {
+  .burger {
+    display: flex;
+  }
+  .menu {
+    display: none;
+  }
+
+  /* .menu.open{
+        display: block;
+        position:fixed;
+        z-index:50;
+        overflow-y: auto;
+        background-color: lightgray;
+        animation: burgerAnimation 0.4s;
+    } */
+  .burger_menu {
+    display: flex;
+    gap: 10px;
+  }
+  .common-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* @keyframes burgerAnimation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+} */
+
+@media screen and (max-width: 650px) {
+  .row2 {
+    flex-direction: column;
+  }
+
+  .graphic-card {
+    margin-bottom: 1rem;
+  }
+}
+
+@media screen and (max-width:500px) {
+    .row1{
+        flex-direction: column;        
+    }
+
+    .card{
+        margin-bottom:1rem;
+    }
+
+    .card:last-of-type{
+        margin-bottom: 0px;
+    }
+}

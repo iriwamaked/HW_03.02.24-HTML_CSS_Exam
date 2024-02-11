@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/styles.css" />
+    <script src="main.js"></script>
+    <title>Dashboard</title>
+  </head>
+  <body class="common-container">
+    <nav class="menu">
+      <h2>Company</h2>
+      <ul>
+        <li class="dash" onclick="changeActive(this)">
+          <span></span>
+          <a href="index.html" onclick="changeActive(this)"
+            >Dashboard</a
+          >
+        </li>
+        <li class="user_profile" onclick="changeActive(this)">
+          <a href="userProfile.html" onclick="changeActive(this)"
+            >User Profile</a
+          >
+        </li>
+        <li class="map">Maps</li>
+        <li class="notify">Notifications</li>
+        <li class="support">Support</li>
+      </ul>
+    </nav>
+    <main class="main-container">
+      <div class="burger_menu">
+        <!-- Бургер -->
+        <div class="burger"><span></span></div>
+        <h2>Dashboard</h2>
+      </div>
+      <!-- Строка 1 -->
+      <div class="row1">
+        <div class="card">
+          <div class="card-content">
+            <img
+              src="images/data_white.svg"
+              alt="Data icon"
+              class="card_icon green_back"
+            />
+
+            <div>
+              <div class="card_title">Used Space</div>
+
+              <div class="card_value">49/50 GB</div>
+            </div>
+          </div>
+          <hr />
+          <div class="card-additional">
+            <img
+              src="images/alert.png"
+              alt="More space icon"
+              class="litle_card_icon"
+            />
+            <span class="description">Get more space...</span>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-content">
+            <img
+              src="images/shop_white.svg"
+              alt="Data icon"
+              class="card_icon orange-back"
+            />
+
+            <div>
+              <div class="card_title">Revenue</div>
+
+              <div class="card_value">$ 34,245</div>
+            </div>
+          </div>
+          <hr />
+          <div class="card-additional">
+            <img
+              src="images/calendar.png"
+              alt="More space icon"
+              class="litle_card_icon"
+            />
+            <span class="description">Last 24 Hours</span>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-content">
+            <img
+              src="images/tag_white.svg"
+              alt="Data icon"
+              class="card_icon blue-back"
+            />
+
+            <div>
+              <div class="card_title">Fixed Issues</div>
+
+              <div class="card_value">75</div>
+            </div>
+          </div>
+          <hr />
+          <div class="card-additional">
+            <img
+              src="images/down.png"
+              alt="More space icon"
+              class="litle_card_icon"
+            />
+            <span class="description">Tracked from Github</span>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-content">
+            <img
+              src="images/paperplane_white.svg"
+              alt="Data icon"
+              class="card_icon pink-back"
+            />
+
+            <div>
+              <div class="card_title">Followers</div>
+
+              <div class="card_value">+ 245</div>
+            </div>
+          </div>
+          <hr />
+          <div class="card-additional">
+            <img
+              src="images/time.png"
+              alt="More space icon"
+              class="litle_card_icon"
+            />
+            <span class="description">Just updated</span>
+          </div>
+        </div>
+      </div>
+      <!-- Строка 2 -->
+      <div class="row2">
+        <div class="graphic-card">
+          <img
+            src="images/graphics.svg"
+            alt="Graphics"
+            class="graphics_img green_back"
+          />
+          <h3>Daily Sales</h3>
+          <p>55% increase in today sales</p>
+          <hr />
+          <img src="images/time.png" alt="Times" class="litle_card_icon" />
+          <span class="graph-description">updated 4 minutes ago</span>
+        </div>
+        <div class="graphic-card">
+          <img
+            src="images/graphics.svg"
+            alt="Graphics"
+            class="graphics_img orange-back"
+          />
+          <h3>Email Subscriptions</h3>
+          <p>Last Campaign Performance</p>
+          <hr />
+          <img src="images/time.png" alt="Times" class="litle_card_icon" />
+          <span class="graph-description">campaign sent 2 days ago</span>
+        </div>
+        <div class="graphic-card">
+          <img
+            src="images/graphics.svg"
+            alt="Graphics"
+            class="graphics_img blue-back"
+          />
+          <h3>Completed Tasks</h3>
+          <p>Last Campaign Performance</p>
+          <hr />
+          <img src="images/time.png" alt="Times" class="litle_card_icon" />
+          <span class="graph-description">campaign sent 2 days ago</span>
+        </div>
+      </div>
+
+      <!-- Cтрока3 -->
+      <div class="row3">
+        <div class="big-card">
+          <nav class="big-card-nav">
+            <ul>
+              <li>Tasks:</li>
+              <li class="bugs">Bugs</li>
+              <li class="website">Website</li>
+              <li class="server">Server</li>
+            </ul>
+          </nav>
+          <table>
+            <tr>
+              <td><input id="firsrtCheck" type="checkbox" checked /></td>
+              <td>
+                <label for="firsrtCheck"
+                  >Sign contract for "What are conference organizers afraid
+                  of?"</label
+                >
+              </td>
+              <td>
+                <img src="images/edit.png" alt="Edit" class="table_img" />
+              </td>
+              <td>
+                <img src="images/remove.png" alt="Remove" class="table_img" />
+              </td>
+            </tr>
+            <tr>
+              <td><input id="secondCheck" type="checkbox" /></td>
+              <td>
+                <label for="secondCheck"
+                  >Lines From Great Russian Literature? Or E-mails From My
+                  Boss</label
+                >
+              </td>
+              <td>
+                <img src="images/edit.png" alt="Edit" class="table_img" />
+              </td>
+              <td>
+                <img src="images/remove.png" alt="Remove" class="table_img" />
+              </td>
+            </tr>
+            <tr>
+              <td><input id="thirdCheck" type="checkbox" /></td>
+              <td>
+                <label for="thirdCheck"
+                  >Sign contract for "What are conference organizers afraid
+                  of?"</label
+                >
+              </td>
+              <td>
+                <img src="images/edit.png" alt="Edit" class="table_img" />
+              </td>
+              <td>
+                <img src="images/remove.png" alt="Remove" class="table_img" />
+              </td>
+            </tr>
+            <tr>
+              <td><input id="fourthCheck" type="checkbox" checked /></td>
+              <td>
+                <label for="fourthCheck"
+                  >Sign contract for "What are conference organizers afraid
+                  of?"</label
+                >
+              </td>
+              <td>
+                <img src="images/edit.png" alt="Edit" class="table_img" />
+              </td>
+              <td>
+                <img src="images/remove.png" alt="Remove" class="table_img" />
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="big-card">
+          <div class="big-card-title">
+            <h3>Employees Stats</h3>
+            <p>New employees on 19th September,2019</p>
+          </div>
+          <table class="second_table">
+            <tr>
+              <td>ID</td>
+              <td>Name</td>
+              <td>Salary</td>
+              <td>Country</td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>Dakota Rice</td>
+              <td>$36.738</td>
+              <td>Niger</td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>Dakota Rice</td>
+              <td>$36.738</td>
+              <td>Niger</td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>Dakota Rice</td>
+              <td>$36.738</td>
+              <td>Niger</td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>Dakota Rice</td>
+              <td>$36.738</td>
+              <td>Niger</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+
+      <!-- Подвал -->
+      <footer>
+        <ul>
+          <li>ABOUT</li>
+          <li>BLOG</li>
+          <li>LICENSES</li>
+        </ul>
+        <p>2019-made with love</p>
+      </footer>
+    </main>
+    <!-- <script>
+        const burger = document.querySelector('.burger');
+const menu = document.querySelector('.menu');
+
+burger.addEventListener('click', function() {
+  this.classList.toggle('active');
+  menu.classList.toggle('open');
+});
+    </script> -->
+  </body>
+</html>
